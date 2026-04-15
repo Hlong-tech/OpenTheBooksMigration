@@ -69,11 +69,11 @@ with tab1:
     # ── Metric cards ──────────────────────────────────────────────────────────
     m1, m2, m3, m4 = st.columns(4)
 
-    emp_delta   = c['employees'] - NATIONAL_AVG['employees']
+    emp_delta   = round(c['employees'] - NATIONAL_AVG['employees'], 1)
     pov_delta   = round(c['poverty'] - NATIONAL_AVG['poverty'], 1)
     inc_delta   = c['median_income'] - NATIONAL_AVG['median_income']
 
-    m1.metric("Govt Employees / 1,000", f"{c['employees']}",
+    m1.metric("Govt Employees / 1,000", f"{round(c['employees'], 1)}",
               delta=f"{emp_delta:+} vs avg", delta_color="inverse")
     m2.metric("Net Migration", f"{c['migration']:+,}",
               delta="People moving in" if c['migration'] > 0 else "People moving out",
