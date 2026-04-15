@@ -2414,6 +2414,6 @@ NATIONAL_AVG = {
     "spending":      0,
     "employees":     58.9,
     "migration":     117,
-    "poverty":       13.6,
-    "median_income": 63995,
+    "poverty":       11.1,
+    "median_income": 80610,
 }
